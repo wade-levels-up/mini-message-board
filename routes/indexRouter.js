@@ -5,8 +5,8 @@ const { format } = require("date-fns");
 const messages = [
   {
     id: 1,
-    text: "Hi there!",
-    user: "Amando",
+    text: "Maaaaaaate!",
+    user: "Roy 😃",
     added: format(new Date(), "h:mmaaa dd/MM/yy"),
   },
   {

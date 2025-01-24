@@ -22,13 +22,11 @@ h2 {
 
 body {
     width: 100vw;
-    background-color: black;
+    background-color: #080820;
 }
 
 main {
     width: 100%;
-
-    background-color: black;
     color: azure;
     padding: 30px;
 
@@ -61,20 +59,23 @@ ul {
     padding: 6px;
 }
 
+.message-container p {
+    text-wrap: pretty;
+    hyphens: auto;
+}
+
 button {
-    padding: 9px;
+    padding: 3px 18px;
     background-color: black;
     border: 2px inset rgba(237, 254, 254, 0.3);
-    border-radius: 9px;
+    border-radius: 0px 9px 0px 0px;
     color: azure;
     font-size: 1rem;
-    padding-left: 18px;
-    padding-right: 18px;
 }
 
 button:hover, button:focus {
     cursor: pointer;
-    outline: 3px solid paleturquoise;
+    outline: 2px solid paleturquoise;
 }
 
 input {
