@@ -1,7 +1,7 @@
 :root {
     font-family: 'Lucida Sans', Arial, sans-serif, system-ui;
     font-size: 16px;
-    color: azure;
+    color: rgb(240, 240, 255);
 }
 
 * {
@@ -30,9 +30,18 @@ body {
     flex-direction: column;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
 main {
     width: 100%;
     height: 100%;
+    background-color: #080820;
     flex-grow: 1;
     padding: 30px;
     display: flex;
@@ -52,7 +61,7 @@ ul {
     display: flex;
     flex-direction: column;
     max-width: 600px;
-    border: 1px inset azure;
+    border: 1px inset rgb(240, 240, 255);
     gap: 1rem;
 }
 
@@ -74,13 +83,13 @@ button {
     background-color: black;
     border: 2px inset rgba(237, 254, 254, 0.3);
     border-radius: 0px 9px 0px 0px;
-    color: azure;
+    color: rgb(240, 240, 255);
     font-size: 1rem;
 }
 
 button:hover, button:focus {
     cursor: pointer;
-    outline: 2px solid paleturquoise;
+    outline: 2px solid rgb(186, 186, 236);
 }
 
 input {
@@ -113,6 +122,4 @@ footer {
     align-items: center;
     width: 100%;
     padding: 9px;
-    border-top: 1px dotted azure;
-    text-decoration: underline;
 }

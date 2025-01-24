@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <main>
+    <header>
         <h1>Oops.. Something went wrong ☹️</h1>
-        <h2><%= errorCode %> <%= errorMessage %></h2>
-        <button onclick="location.href='/'">Home</button>
+    </header>
+    <main>
+        <h2><%= errorCode %> Error: <%= errorMessage %></h2>
+        <button onclick="location.href='/'">Return Home</button>
     </main>
     <footer>
         Made By Wade
