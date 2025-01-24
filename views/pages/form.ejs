@@ -7,22 +7,25 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>New Message Page</h1>
+    <h1>New Message</h1>
     <form method="POST" action="/new">
-        <ul>
-            <li>
-                <label for="userName">Name:</label>
-                <input type="text" name="userName" id="userName" maxlength="30" placeholder="Enter your name" required>
-            </li>
-            <li>
-                <label for="messageText">Message:</label>
-                <input type="text" name="messageText" id="messageText" maxlength="150" placeholder="What would you like to post to the message board?" required>
-            </li>
-            <li>
-                <button type="submit">Submit</button>
-                <button><a href="/">Cancel</a></button>
-            </li>
-        </ul>
+        <fieldset>
+            <legend>Details</legend>
+            <ul>
+                <li>
+                    <label for="userName">Name:</label>
+                    <input type="text" name="userName" id="userName" maxlength="30" placeholder="Enter your name" required>
+                </li>
+                <li>
+                    <label for="messageText">Message:</label>
+                    <textarea name="messageText" id="messageText" maxlength="150" rows="5" cols="30" required></textarea>
+                </li>
+                <li>
+                    <button type="submit">Submit</button>
+                    <button onclick="location.href='/'">Cancel</button>
+                </li>
+            </ul>
+        </fieldset>
     </form>
 </body>
 </html>

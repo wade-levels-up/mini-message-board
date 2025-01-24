@@ -38,7 +38,7 @@ indexRouter.get("/details", (req, res, next) => {
     if (!message) {
       throw new Error("Message not found");
     }
-    res.render("pages/details", { message });
+    res.render("pages/details", { messages: message });
   } catch (error) {
     error.status = 404; // Set the status code
     next(error); // Pass the error to the error-handling middleware

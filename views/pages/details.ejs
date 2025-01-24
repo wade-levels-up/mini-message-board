@@ -8,10 +8,12 @@
 </head>
 <body>
     <h1>Message Details</h1>
-    <h2>Name: <%= messages.user %></h2>
-    <p>Message:</p>
-    <p><%= messages.text %></p>
-    <span>Date: <%= messages.added %></span>
-    <button><a href="/">Home</a></button>
+    <div class="message-container">
+        <div>
+            <h2>Name: <%= messages.user %></h2><span>Date: <%= messages.added %></span>
+        </div>
+        <p><%= messages.text %></p>
+    </div>
+    <button onclick="location.href='/'">Home</button>
 </body>
 </html>
