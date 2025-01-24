@@ -14,4 +14,12 @@ const indexRouter = require("./routes/indexRouter.js");
 
 app.use("/", indexRouter);
 
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(err.status || 500).render("pages/error", {
+    errorCode: err.status,
+    errorMessage: err.message,
+  });
+});
+
 app.listen(PORT, () => console.log(`Server live at http://localhost:${PORT}`));
