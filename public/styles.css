@@ -1,6 +1,7 @@
 :root {
-    font-family:'Lucida Grande', 'Lucida Sans', Arial, sans-serif, system-ui;
+    font-family: 'Lucida Sans', Arial, sans-serif, system-ui;
     font-size: 16px;
+    color: azure;
 }
 
 * {
@@ -22,14 +23,18 @@ h2 {
 
 body {
     width: 100vw;
+    min-height: 100vh;
+    max-height: fit-content;
     background-color: #080820;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
     width: 100%;
-    color: azure;
+    height: 100%;
+    flex-grow: 1;
     padding: 30px;
-
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -98,3 +103,16 @@ legend {
     text-align: center;
 }
 
+span {
+    font-size: 0.8rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 9px;
+    border-top: 1px dotted azure;
+    text-decoration: underline;
+}
