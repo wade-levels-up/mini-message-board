@@ -36,6 +36,11 @@ header {
     justify-content: center;
     align-items: center;
     padding: 30px;
+    gap: 1rem;
+}
+
+header img {
+    border-radius: 30px;
 }
 
 main {
@@ -51,6 +56,16 @@ main {
     align-items: center;
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 9px;
+    gap: 0.8rem;
+}
+
+
 ul {
     display: flex;
     flex-direction: column;
@@ -62,7 +77,8 @@ ul {
     flex-direction: column;
     max-width: 600px;
     border: 1px inset rgb(240, 240, 255);
-    gap: 1rem;
+    gap: 1.2rem;
+    border-radius: 9px;
 }
 
 .message-container div, p, fieldset {
@@ -70,12 +86,23 @@ ul {
     align-items: center;
     min-width: 325px;
     justify-content: space-between;
-    padding: 6px;
+    padding: 9px;
 }
 
 .message-container p {
     text-wrap: pretty;
     hyphens: auto;
+}
+
+a {
+    color: rgb(240, 240, 255);
+    padding: 9px;
+    border-radius: 15px;
+    text-decoration: underline;
+}
+
+a:focus, a:hover {
+    outline: 1px solid rgb(186, 186, 236);
 }
 
 button {
@@ -116,10 +143,9 @@ span {
     font-size: 0.8rem;
 }
 
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 9px;
+@media (min-width: 1000px) {
+    .message-container {
+        width: 900px;
+        max-width: 900px;
+    }
 }
