@@ -143,6 +143,21 @@ span {
     font-size: 0.8rem;
 }
 
+
+@keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(5deg);
+    }
+}
+  
+.wiggle {
+    display: inline-block;
+    animation: wiggle 0.9s ease-in-out infinite;
+}
+
 @media (min-width: 1000px) {
     .message-container {
         width: 900px;
