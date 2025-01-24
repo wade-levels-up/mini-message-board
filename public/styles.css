@@ -22,6 +22,11 @@ h2 {
 
 body {
     width: 100vw;
+    background-color: black;
+}
+
+main {
+    width: 100%;
 
     background-color: black;
     color: azure;
@@ -59,9 +64,12 @@ ul {
 button {
     padding: 9px;
     background-color: black;
-    border: 2px inset azure;
+    border: 2px inset rgba(237, 254, 254, 0.3);
     border-radius: 9px;
     color: azure;
+    font-size: 1rem;
+    padding-left: 18px;
+    padding-right: 18px;
 }
 
 button:hover, button:focus {
@@ -82,6 +90,7 @@ textarea {
     padding: 9px;
     margin-top: 1rem;
     font-size: 1rem;
+    width: 100%;
 }
 
 legend {

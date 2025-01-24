@@ -7,25 +7,27 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>New Message</h1>
-    <form method="POST" action="/new">
-        <fieldset>
-            <legend>Details</legend>
-            <ul>
-                <li>
-                    <label for="userName">Name:</label>
-                    <input type="text" name="userName" id="userName" maxlength="30" placeholder="Enter your name" required>
-                </li>
-                <li>
-                    <label for="messageText">Message:</label>
-                    <textarea name="messageText" id="messageText" maxlength="150" rows="5" cols="30" required></textarea>
-                </li>
-                <li>
-                    <button type="submit">Submit</button>
-                    <button onclick="location.href='/'">Cancel</button>
-                </li>
-            </ul>
-        </fieldset>
-    </form>
+    <main>
+        <h1>New Message</h1>
+        <form method="POST" action="/new">
+            <fieldset>
+                <legend>Details</legend>
+                <ul>
+                    <li>
+                        <label for="userName">Name:</label>
+                        <input type="text" name="userName" id="userName" maxlength="20" placeholder="Enter your name" required>
+                    </li>
+                    <li>
+                        <label for="messageText">Message:</label>
+                        <textarea name="messageText" id="messageText" maxlength="150" rows="5" cols="30" required></textarea>
+                    </li>
+                    <li>
+                        <button type="submit">Submit</button>
+                        <button onclick="location.href='/'">Cancel</button>
+                    </li>
+                </ul>
+            </fieldset>
+        </form>
+    </main>
 </body>
 </html>

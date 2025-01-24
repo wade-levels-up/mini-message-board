@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1>Message Details</h1>
-    <div class="message-container">
-        <div>
-            <h2>Name: <%= messages.user %></h2><span>Date: <%= messages.added %></span>
+    <main>
+        <h1>Message Details</h1>
+        <div class="message-container">
+            <div>
+                <h2><%= messages.user %></h2>
+            </div>
+            <div>
+                <span>Date: <%= messages.added %></span>
+            </div>
+            <p><%= messages.text %></p>
         </div>
-        <p><%= messages.text %></p>
-    </div>
-    <button onclick="location.href='/'">Home</button>
+        <button onclick="location.href='/'">Home</button>
+    </main>
 </body>
 </html>

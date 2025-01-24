@@ -7,13 +7,13 @@ const messages = [
     id: 1,
     text: "Hi there!",
     user: "Amando",
-    added: format(new Date(), "dd/MM/yy"),
+    added: format(new Date(), "h:mmaaa dd/MM/yy"),
   },
   {
     id: 2,
     text: "Hello World!",
     user: "Charles",
-    added: format(new Date(), "dd/MM/yy"),
+    added: format(new Date(), "h:mmaaa dd/MM/yy"),
   },
 ];
 
@@ -26,7 +26,7 @@ indexRouter.post("/new", (req, res) => {
     id: messages.length + 1,
     text: req.body.messageText,
     user: req.body.userName,
-    added: format(new Date(), "dd/MM/yy"),
+    added: format(new Date(), "h:mmaaa dd/MM/yy"),
   });
   res.redirect("/");
 });

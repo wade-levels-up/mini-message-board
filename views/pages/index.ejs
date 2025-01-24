@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <h1><em>mini</em>-MSG-wall</h1>
-    <h2>Drop a message for all to see</h2>
-    <ul>
-        <% messages.forEach((message) => { %>
-            <li class="message-container">
-                <div>
-                    <h3><%= message.user %></h3><span><%= message.added %></span>
-                </div>
-                <p><%= message.text %></p>  
-                <div>
-                    <button onclick="location.href='/details?id=<%= message.id %>'">Open</button>
-                </div>
-            </li>
-        <% }) %>
-    </ul>
-    <button onclick="location.href='/new'">Create New Message</button>
+    <main>
+        <h1><em>mini</em>-MSG-wall</h1>
+        <h2>Drop a message for all to see</h2>
+        <ul>
+            <% messages.forEach((message) => { %>
+                <li class="message-container">
+                    <div>
+                        <h3><%= message.user %></h3><span><%= message.added %></span>
+                    </div>
+                    <p><%= message.text %></p>
+                    <div>
+                        <button onclick="location.href='/details?id=<%= message.id %>'">Open</button>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+        <button onclick="location.href='/new'">Create New Message</button>
+    </main>
 </body>
 </html>
