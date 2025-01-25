@@ -11,9 +11,9 @@
 <body>
     <header>
         <h1>Mini-MSG-Wall</h1>
-        <h2>A public msg board</h2>
+        <h2><em>A public message board</em></h2>
         <div><i class="fa-regular fa-message fa-lg wiggle"></i><span></span> <%= messages.length %> msgs</div>
-        <span>Most recent message by: <%= messages[messages.length -1].user %></span>
+        <span>Last post by: <%= messages[messages.length -1].user %></span>
     </header>
     <nav>
         <button onclick="location.href='/new'"><i class="fa-solid fa-plus fa-sm"></i> New Message</button>
