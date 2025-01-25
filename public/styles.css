@@ -19,6 +19,7 @@
     text-decoration: none;
     margin: 0;
     padding: 0;
+    line-height: 1.5rem;
 }
 
 h1 {
@@ -39,6 +40,7 @@ body {
     background-color: #080820;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 header {
@@ -53,6 +55,16 @@ header {
 
 header img {
     border-radius: 30px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: rgba(8, 8, 32, 0.95);
+    position: sticky;
+    top: 0px;
+    padding: 1rem;
 }
 
 main {
@@ -171,6 +183,12 @@ legend {
 
 span {
     font-size: 0.8rem;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 

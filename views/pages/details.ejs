@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini-Msg-Wall - Msg Details</title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/logo.png">
     <script src="https://kit.fontawesome.com/74043cfcaf.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -18,7 +19,7 @@
             </div>
             <p><%= messages.text %></p>
             <div>
-                <span>Date: <%= messages.added %></span>
+                <span class="time">Message added at: <i class="fa-regular fa-clock fa-sm"></i><%= messages.added %></span>
             </div>
         </div>
         <button onclick="location.href='/'">Home</button>

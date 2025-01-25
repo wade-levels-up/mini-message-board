@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title>
     <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/logo.png">
     <script src="https://kit.fontawesome.com/74043cfcaf.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <h1>Mini-MSG-Wall</h1>
-        <h2>Leave a message for all to see</h2>
+        <h2>A public msg board</h2>
         <div><i class="fa-regular fa-message fa-lg wiggle"></i><span></span> <%= messages.length %> msgs</div>
-        <span>Most recent msg by: <%= messages[messages.length -1].user %></span>
+        <span>Most recent message by: <%= messages[messages.length -1].user %></span>
     </header>
+    <nav>
+        <button onclick="location.href='/new'"><i class="fa-solid fa-plus fa-sm"></i> New Message</button>
+    </nav>
     <main>
         <ul>
             <% for(let i = messages.length - 1; i >= 0; i--) { %>
                 <li class="message-container">
                     <div class="messageHeader">
-                        <h3><%= messages[i].user %></h3><span><%= messages[i].added %></span>
+                        <h3><%= messages[i].user %></h3><span class="time"><i class="fa-regular fa-clock fa-sm"></i><%= messages[i].added %></span>
                     </div>
                     <p><%= messages[i].text %></p>
                     <div>
@@ -28,7 +32,6 @@
                 </li>
             <% } %>
         </ul>
-        <button onclick="location.href='/new'"><i class="fa-solid fa-plus fa-sm"></i> New Message</button>
     </main>
     <footer>
         <a href="https://github.com/wade-levels-up/mini-message-board">
