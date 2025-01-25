@@ -16,7 +16,7 @@
     </header>
     <main>
         <ul>
-            <% for(let i = messages.length - 1; i > 0; i--) { %>
+            <% for(let i = messages.length - 1; i >= 0; i--) { %>
                 <li class="message-container">
                     <div class="messageHeader">
                         <h3><%= messages[i].user %></h3><span><%= messages[i].added %></span>
