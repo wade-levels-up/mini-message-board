@@ -10,21 +10,22 @@
 <body>
     <header>
         <h1>New Message</h1>
+        <h2>What's on your mind?</h2>
     </header>
     <main>
         <form method="POST" action="/new">
             <fieldset>
-                <legend>Details</legend>
+                <legend> ✉️ </legend>
                 <ul>
                     <li>
-                        <label for="userName">Name:</label>
-                        <input type="text" name="userName" id="userName" maxlength="14" placeholder="Enter your name" required>
+                        <label for="userName" title="name">Name:</label>
+                        <input type="text" name="userName" id="userName" maxlength="18" placeholder="Your name (18 characters max)" required>
                     </li>
                     <li>
-                        <label for="messageText">Message:</label>
+                        <label for="messageText" title="message">Message:</label>
                         <textarea name="messageText" id="messageText" maxlength="150" rows="5" cols="30" required></textarea>
                     </li>
-                    <li>
+                    <li class="formButtonArea">
                         <button type="submit">Submit</button>
                         <button onclick="location.href='/'">Cancel</button>
                     </li>

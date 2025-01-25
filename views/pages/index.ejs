@@ -9,26 +9,26 @@
 </head>
 <body>
     <header>
-        <h1><em>mini</em>-MSG-wall</h1>
+        <h1>Mini-MSG-Wall</h1>
         <h2>Leave a message for all to see</h2>
         <div><i class="fa-regular fa-message fa-lg wiggle"></i><span></span> <%= messages.length %> msgs</div>
         <span>Most recent msg by: <%= messages[messages.length -1].user %></span>
     </header>
     <main>
         <ul>
-            <% messages.forEach((message) => { %>
+            <% for(let i = messages.length - 1; i > 0; i--) { %>
                 <li class="message-container">
-                    <div>
-                        <h3><%= message.user %></h3><span><%= message.added %></span>
+                    <div class="messageHeader">
+                        <h3><%= messages[i].user %></h3><span><%= messages[i].added %></span>
                     </div>
-                    <p><%= message.text %></p>
+                    <p><%= messages[i].text %></p>
                     <div>
-                        <button onclick="location.href='/details?id=<%= message.id %>'">Open</button>
+                        <button onclick="location.href='/details?id=<%- messages[i].id %>'">Open</button>
                     </div>
                 </li>
-            <% }) %>
+            <% } %>
         </ul>
-        <button onclick="location.href='/new'">Create New Message</button>
+        <button onclick="location.href='/new'"><i class="fa-solid fa-plus fa-sm"></i> New Message</button>
     </main>
     <footer>
         <a href="https://github.com/wade-levels-up/mini-message-board">

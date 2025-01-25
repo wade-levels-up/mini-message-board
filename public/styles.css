@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'streetbomber';
+    src: url('streetbomber_personaluseonly-webfont.woff2') format('woff2'),
+         url('streetbomber_personaluseonly-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 :root {
     font-family: 'Lucida Sans', Arial, sans-serif, system-ui;
     font-size: 16px;
@@ -13,7 +22,9 @@
 }
 
 h1 {
-    font-size: 2.2rem;
+    font-family: 'streetbomber';
+    font-size: 3.5rem;
+    letter-spacing: 0.2rem;
 }
 
 h2 {
@@ -37,6 +48,7 @@ header {
     align-items: center;
     padding: 30px;
     gap: 1rem;
+    text-align: center;
 }
 
 header img {
@@ -76,9 +88,11 @@ ul {
     display: flex;
     flex-direction: column;
     max-width: 600px;
-    border: 1px inset rgb(240, 240, 255);
     gap: 1.2rem;
     border-radius: 9px;
+    border-top: 1px solid  rgba(240, 240, 255, 0.5);
+    background-color: #0a0a22;
+    box-shadow: 5px 5px 15px black;
 }
 
 .message-container div, p, fieldset {
@@ -87,11 +101,23 @@ ul {
     min-width: 325px;
     justify-content: space-between;
     padding: 9px;
+    border-radius: 9px;
 }
 
 .message-container p {
     text-wrap: pretty;
     hyphens: auto;
+}
+
+.messageHeader {
+    background-color: #0e0e30;
+    border-radius: 9px 9px 0px 0px;
+}
+
+.formButtonArea {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 a {
@@ -106,6 +132,10 @@ a:focus, a:hover {
 }
 
 button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
     padding: 3px 18px;
     background-color: black;
     border: 2px inset rgba(237, 254, 254, 0.3);
