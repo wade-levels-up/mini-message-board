@@ -33,6 +33,7 @@ indexRouter.get("/", (req, res) =>
   res.render("pages/index", { title: "Mini-Msg-Wall", messages: messages })
 );
 indexRouter.get("/new", (req, res) => res.render("pages/form"));
+
 indexRouter.post("/new", (req, res) => {
   messages.push({
     id: messages.length + 1,
@@ -42,6 +43,7 @@ indexRouter.post("/new", (req, res) => {
   });
   res.redirect("/");
 });
+
 indexRouter.get("/details", (req, res, next) => {
   try {
     const message = req.query.id

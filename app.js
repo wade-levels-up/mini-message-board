@@ -1,8 +1,9 @@
 // Setup
+require('dotenv').config();
 const express = require("express");
 const path = require("node:path");
 const app = express();
-const PORT = 3000;
+const PORT = process.env.LOCAL_PORT;
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
