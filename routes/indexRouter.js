@@ -56,21 +56,18 @@ indexRouter.post("/new", asyncHandler(async (req, res) => {
   res.redirect("/");
 }));
 
-indexRouter.get("/details", (req, res, next) => {
+indexRouter.get("/details", asyncHandler(async (req, res, next) => {
 
   try {
-    const formatedMessages = formatMessagesDate();
-    const message = req.query.id
-      ? formatedMessages[req.query.id - 1]
-      : formatedMessages[formatedMessages.length - 1];
-    if (!message) {
-      throw new Error("Message not found");
+    if (!req.query.id) {
+      throw new Error('Must provide ID for query')
     }
-    res.render("pages/details", { messages: message });
+    const formattedMessage = formatMessagesDate(await db.getMessageById(req.query.id));
+    res.render("pages/details", { messages: formattedMessage[0] });
   } catch (error) {
     error.status = 404; // Set the status code
     next(error); // Pass the error to the error-handling middleware
   }
-});
+}));
 
 module.exports = indexRouter;
