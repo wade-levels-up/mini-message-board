@@ -26,7 +26,7 @@ async function main() {
     if (env === 'local') {
         connectionString = process.env.CONNECTION_STRING
     } else if ( env === 'production') {
-        connectionString = process.env.PROD_CONNECTION_STRING
+        connectionString = process.env.PUBLIC_PROD_CONNECTION_STRING
     } else {
         throw new Error(`Enter 'npm run seed local' OR 'npm run seed production`);
     }
