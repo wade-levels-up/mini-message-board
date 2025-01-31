@@ -1,6 +1,8 @@
 const { Router } = require("express");
 const indexRouter = Router();
 const { format } = require("date-fns");
+const db = require('../db/queries');
+const asyncHandler = require('express-async-handler')
 
 const messages = [
   {
@@ -29,27 +31,30 @@ const messages = [
   },
 ];
 
-function formatMessagesDate() {
-  return messages.map((message) => ({
+function formatMessagesDate(msgs) {
+  return msgs.map((message) => ({
     ...message,
     added: format(message.added, "h:mm dd/MM/yy"),
   }));
 }
 
-indexRouter.get("/", (req, res) => {
-  res.render("pages/index", { title: "Mini-Msg-Wall", messages: formatMessagesDate() })
-});
+indexRouter.get("/", asyncHandler( async(req, res) => {
+    res.render("pages/index", { title: "Mini-Msg-Wall", messages: formatMessagesDate(await db.getAllMessages()) })
+  }
+));
+
 indexRouter.get("/new", (req, res) => res.render("pages/form"));
 
-indexRouter.post("/new", (req, res) => {
-  messages.push({
-    id: messages.length + 1,
-    text: req.body.messageText,
-    user: req.body.userName,
-    added: new Date(),
-  });
+indexRouter.post("/new", asyncHandler(async (req, res) => {
+  await db.insertMessage(req.body.messageText, req.body.userName)
+  // messages.push({
+  //   id: messages.length + 1,
+  //   text: req.body.messageText,
+  //   user: req.body.userName,
+  //   added: new Date(),
+  // });
   res.redirect("/");
-});
+}));
 
 indexRouter.get("/details", (req, res, next) => {
 

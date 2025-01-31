@@ -23,7 +23,7 @@
             <% for(let i = messages.length - 1; i >= 0; i--) { %>
                 <li class="message-container">
                     <div class="messageHeader">
-                        <h3><%= messages[i].user %></h3><span class="time"><i class="fa-regular fa-clock fa-sm"></i><%= messages[i].added %></span>
+                        <h3><%= messages[i].username %></h3><span class="time"><i class="fa-regular fa-clock fa-sm"></i><%= messages[i].added %></span>
                     </div>
                     <p><%= messages[i].text %></p>
                     <div>
